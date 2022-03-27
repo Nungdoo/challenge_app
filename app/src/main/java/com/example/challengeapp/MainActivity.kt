@@ -1,5 +1,6 @@
 package com.example.challengeapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,5 +26,11 @@ class MainActivity : AppCompatActivity() {
         binding.rvChallenge.setHasFixedSize(true)
 
         binding.rvChallenge.adapter = ChallengeAdapter(challengeList)
+
+        // 플로팅 버튼 클릭
+        binding.btnPlus.setOnClickListener {
+            val intent = Intent(this, CreateActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
