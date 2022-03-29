@@ -29,7 +29,7 @@ class ChallengeAdapter(val challengeList: ArrayList<Challenge>) : RecyclerView.A
     }
 
     override fun onBindViewHolder(holder: ChallengeAdapter.CustomViewHolder, position: Int) {
-        holder.icon.setImageResource(challengeList.get(position).icon)
+        holder.icon.text = challengeList.get(position).icon
         holder.title.text = challengeList.get(position).title
         holder.contents.text = challengeList.get(position).contents
     }
@@ -40,7 +40,7 @@ class ChallengeAdapter(val challengeList: ArrayList<Challenge>) : RecyclerView.A
 
     class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // val id: Int, val icon: Int, val title: String, val contents: String, val push: Boolean
-        val icon = itemView.findViewById<ImageView>(R.id.iv_icon)
+        val icon = itemView.findViewById<TextView>(R.id.tv_icon)
         val title = itemView.findViewById<TextView>(R.id.tv_title)
         val contents = itemView.findViewById<TextView>(R.id.tv_contents)
     }

@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val challengeList = arrayListOf(
-            Challenge(0, R.drawable.water, "Drink Water", "하루에 2리터 이상 물마시기!", true)
+            Challenge(0, "Icon", "Drink Water", "하루에 2리터 이상 물마시기!", true)
         )
 
         binding.rvChallenge.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
